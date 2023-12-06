@@ -22,23 +22,7 @@ public class Enemy extends Actor
         int y = getY() + enemySpeed;
         setLocation(x, y);
         
-        //Remove apple and draw game over when apple gets to the bottom.
-        MyWorld world = (MyWorld) getWorld();
-        if(getY() >= world.getHeight())
-        {
-            world.createEnemy();
-            world.removeObject(this);
-        }
         
-        if(world.score < 0)
-        {
-            world.score++;
-            world.gameOver();
-            if(world.score == 0)
-            {
-                world.removeObject(this);
-            }
-        }
     }
     
     public void setSpeed(int spd)

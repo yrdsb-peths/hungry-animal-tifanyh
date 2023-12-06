@@ -12,6 +12,8 @@ public class MyWorld extends World
     public int score = 0;
     Label scoreLabel;
     int level = 1;
+    SimpleTimer bombTimer = new SimpleTimer();
+    boolean gameIsOver = false;
     
     /**
      * Constructor for objects of class MyWorld.
@@ -41,6 +43,7 @@ public class MyWorld extends World
     {
         Label gameOverLabel = new Label("Game Over", 100);
         addObject(gameOverLabel, 300, 200);
+        gameIsOver = true;
     }
     
     public void newEnemy()
@@ -92,5 +95,14 @@ public class MyWorld extends World
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
         addObject(enemy, x, y);
+    }
+    
+    public void act() {
+        if(!gameIsOver) {
+            if(bombTimer.millisElapsed() > 1000){
+                bombTimer.mark();
+                createEnemy();
+            }
+        }
     }
 }
