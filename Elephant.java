@@ -89,9 +89,9 @@ public class Elephant extends Actor
      */
     public void eat()
     {
-        if(isTouching(Apple.class))
+        if(isTouching(Blueberry.class))
         {
-            removeTouching(Apple.class);
+            removeTouching(Blueberry.class);
             MyWorld world = (MyWorld) getWorld();
             world.createApple();
             world.increaseScore();

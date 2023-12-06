@@ -61,10 +61,10 @@ public class MyWorld extends World
      */
     public void createApple()
     {
-        Apple apple = new Apple();
-        apple.setSpeed(level);
+        Blueberry blueberry = new Blueberry();
+        blueberry.setSpeed(level);
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
-        addObject(apple, x, y);
+        addObject(blueberry, x, y);
     }
 }

@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Tiffany Ho) 
  * @version (November 2023)
  */
-public class Apple extends Actor
+public class Blueberry extends Actor
 {
     /**
      * Act - do whatever the Apple wants to do. This method is called whenever
