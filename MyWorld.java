@@ -31,6 +31,7 @@ public class MyWorld extends World
         addObject(scoreLabel, 50, 50);
 
         createApple();
+        createEnemy();
     }
     
     /**
@@ -42,12 +43,28 @@ public class MyWorld extends World
         addObject(gameOverLabel, 300, 200);
     }
     
+    public void newEnemy()
+    {
+        createEnemy();
+    }
+    
     /**
      * Increase score.
      */
     public void increaseScore()
     {
         score++;
+        scoreLabel.setValue(score);
+        
+        if(score % 5 == 0)
+        {
+            level += 1;
+        }
+    }
+    
+    public void decreaseScore()
+    {
+        score = score - 1;
         scoreLabel.setValue(score);
         
         if(score % 5 == 0)
@@ -66,5 +83,14 @@ public class MyWorld extends World
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
         addObject(blueberry, x, y);
+    }
+    
+    public void createEnemy()
+    {
+        Enemy enemy = new Enemy();
+        enemy.setSpeed(level);
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject(enemy, x, y);
     }
 }
