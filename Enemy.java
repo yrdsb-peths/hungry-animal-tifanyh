@@ -21,8 +21,6 @@ public class Enemy extends Actor
         int x = getX();
         int y = getY() + enemySpeed;
         setLocation(x, y);
-        
-        
     }
     
     public void setSpeed(int spd)

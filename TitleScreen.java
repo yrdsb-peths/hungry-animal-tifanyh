@@ -47,6 +47,5 @@ public class TitleScreen extends World
         
         Label label = new Label("Press <space> to start the game", 40);
         addObject(label,300,350);
-
     }
 }

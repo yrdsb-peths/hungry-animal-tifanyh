@@ -74,6 +74,11 @@ public class MyWorld extends World
         {
             level += 1;
         }
+        
+        if(score < 0)
+        {
+            gameOver();
+        }
     }
     
     /**
@@ -99,7 +104,7 @@ public class MyWorld extends World
     
     public void act() {
         if(!gameIsOver) {
-            if(bombTimer.millisElapsed() > 1000){
+            if(bombTimer.millisElapsed() > 2500){
                 bombTimer.mark();
                 createEnemy();
             }
