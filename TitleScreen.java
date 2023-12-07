@@ -41,11 +41,13 @@ public class TitleScreen extends World
     {
         Elephant elephant = new Elephant();
         addObject(elephant, 300, 180);
-        
+
         Label label2 = new Label("Use \u2190 and \u2192 to Move", 40);
-        addObject(label2,300,280);
-        
+        addObject(label2,300,250);
+
         Label label = new Label("Press <space> to start the game", 40);
-        addObject(label,300,350);
+        addObject(label,300,300);
+        Label label3 = new Label("Avoid the bombs!", 40);
+        addObject(label3,300,353);
     }
 }
