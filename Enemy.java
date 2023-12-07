@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Enemy here.
+ * Bomb to decrese the score and make game harder.
  * 
  * @author Tiffany Ho
  * @version November 6 2023
@@ -16,7 +16,6 @@ public class Enemy extends Actor
     int enemySpeed = 1;
     public void act()
     {
-        // Add your action code here.
         // Add your action code here.
         int x = getX();
         int y = getY() + enemySpeed;
