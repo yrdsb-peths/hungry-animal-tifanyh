@@ -104,7 +104,7 @@ public class MyWorld extends World
     
     public void act() {
         if(!gameIsOver) {
-            if(bombTimer.millisElapsed() > 2500){
+            if(bombTimer.millisElapsed() > 3000){
                 bombTimer.mark();
                 createEnemy();
             }
